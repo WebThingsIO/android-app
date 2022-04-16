@@ -1,4 +1,4 @@
-package io.webthings.webthingsandroidapp
+package io.webthings.webthings
 
 import org.junit.Test
 
