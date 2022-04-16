@@ -2,14 +2,21 @@ package io.webthings.webthings.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
+import io.webthings.webthings.R
 
 // Set of Material typography styles to start with
+
+val WebthingsFont = FontFamily(
+    Font(R.font.zilla_slab_bold)
+
+)
 val Typography = Typography(
     body1 = TextStyle(
-        fontFamily = FontFamily.Default,
+        fontFamily = WebthingsFont,
         fontWeight = FontWeight.Normal,
         fontSize = 16.sp
     )

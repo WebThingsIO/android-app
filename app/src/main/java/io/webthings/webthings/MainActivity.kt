@@ -9,35 +9,48 @@ import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
 import io.webthings.webthings.ui.theme.WebthingsTheme
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
+import io.webthings.webthings.ui.NavRoutes
+import io.webthings.webthings.ui.screens.HomeScreen
+
+const val DEVICES_PREVIEW = Devices.PIXEL_4_XL//Devices used for the preview
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             WebthingsTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colors.background
-                ) {
-                    Greeting("Android")
-                }
+                NavApp()
             }
         }
     }
 }
 
 @Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
+fun NavApp(){
+    val navController = rememberNavController()
+    val context = LocalContext.current
+
+    NavHost(
+        navController = navController,
+        startDestination = NavRoutes.HomeScreen.route
+    ){
+        composable(NavRoutes.HomeScreen.route){
+            HomeScreen(navController = navController)
+        }
+    }
 }
 
-@Preview(showBackground = true)
+@Preview(showBackground = true, device = DEVICES_PREVIEW)
 @Composable
 fun DefaultPreview() {
     WebthingsTheme {
-        Greeting("Android")
+        NavApp()
     }
 }
