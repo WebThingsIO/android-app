@@ -10,6 +10,6 @@ val Teal200 = Color(0xFF03DAC5)
 //Webthings Color
 
 val LightBlue = Color(93,155,199)
-val DarkBlue = Color(82, 136, 175)
+val DarkBlue = Color(72, 120, 154)
 val White = Color(255,255,255)
 val DarkWhite = Color(221,221,221)

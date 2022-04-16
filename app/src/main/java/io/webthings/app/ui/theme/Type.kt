@@ -20,7 +20,7 @@ fun TextFont() = FontFamily(
 )
 
 val Typography = Typography(
-    defaultFontFamily = TextFont(),
+    defaultFontFamily = WebthingsFont,
     body1 = TextStyle(
         fontFamily = TextFont(),
         fontWeight = FontWeight.Normal,
