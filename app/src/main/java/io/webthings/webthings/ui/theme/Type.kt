@@ -14,7 +14,9 @@ val WebthingsFont = FontFamily(
     Font(R.font.zilla_slab_bold)
 
 )
+
 val Typography = Typography(
+    defaultFontFamily = WebthingsFont,
     body1 = TextStyle(
         fontFamily = WebthingsFont,
         fontWeight = FontWeight.Normal,
