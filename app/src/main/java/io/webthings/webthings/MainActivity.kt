@@ -11,6 +11,17 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import io.webthings.webthings.ui.theme.WebthingsTheme
+<<<<<<< 9d02f2866d63baf218b855948b37b10b1bc374ab
+=======
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
+import io.webthings.webthings.ui.NavRoutes
+import io.webthings.webthings.ui.screens.DashboardScreen
+import io.webthings.webthings.ui.screens.HomeScreen
+
+const val DEVICES_PREVIEW = Devices.PIXEL_4_XL//Devices used for the preview
+>>>>>>> work on theme and Dashboard Screen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,8 +41,27 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
+<<<<<<< 9d02f2866d63baf218b855948b37b10b1bc374ab
 fun Greeting(name: String) {
     Text(text = "Hello $name!")
+=======
+fun NavApp(){
+    val navController = rememberNavController()
+    val context = LocalContext.current
+
+    NavHost(
+        navController = navController,
+        startDestination = NavRoutes.DashboardScreen.route
+    ){
+        composable(NavRoutes.HomeScreen.route){
+            HomeScreen(navController = navController)
+        }
+        composable(NavRoutes.DashboardScreen.route){
+            DashboardScreen(navController = navController)
+        }
+
+    }
+>>>>>>> work on theme and Dashboard Screen
 }
 
 @Preview(showBackground = true)

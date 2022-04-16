@@ -7,7 +7,17 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 
 // Set of Material typography styles to start with
+<<<<<<< 9d02f2866d63baf218b855948b37b10b1bc374ab
+=======
+
+val WebthingsFont = FontFamily(
+    Font(R.font.zilla_slab_bold)
+
+)
+
+>>>>>>> work on theme and Dashboard Screen
 val Typography = Typography(
+    defaultFontFamily = WebthingsFont,
     body1 = TextStyle(
         fontFamily = FontFamily.Default,
         fontWeight = FontWeight.Normal,
