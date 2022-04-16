@@ -1,5 +1,6 @@
 package io.webthings.webthings.ui.screens
 
+import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
@@ -11,7 +12,12 @@ import io.webthings.webthings.ui.theme.WebthingsTheme
 
 @Composable
 fun HomeScreen(navController: NavController){
-    Text("WEBTHINGS")
+    Scaffold(
+        topBar = {/* TODO */},
+
+    ) {
+        Text("Webthings\r\nHomeScreen")
+    }
 }
 @Preview(showBackground = true, device = DEVICES_PREVIEW)
 @Composable

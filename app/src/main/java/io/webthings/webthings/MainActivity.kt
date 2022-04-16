@@ -17,6 +17,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import io.webthings.webthings.ui.NavRoutes
+import io.webthings.webthings.ui.screens.DashboardScreen
 import io.webthings.webthings.ui.screens.HomeScreen
 
 const val DEVICES_PREVIEW = Devices.PIXEL_4_XL//Devices used for the preview
@@ -39,11 +40,15 @@ fun NavApp(){
 
     NavHost(
         navController = navController,
-        startDestination = NavRoutes.HomeScreen.route
+        startDestination = NavRoutes.DashboardScreen.route
     ){
         composable(NavRoutes.HomeScreen.route){
             HomeScreen(navController = navController)
         }
+        composable(NavRoutes.DashboardScreen.route){
+            DashboardScreen(navController = navController)
+        }
+
     }
 }
 
