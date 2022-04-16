@@ -12,6 +12,7 @@ import io.webthings.app.R
 
 fun WebthingsFont() = FontFamily(
     Font(R.font.zilla_slab_semibold, FontWeight.Bold),
+    Font(R.font.zilla_slab_medium)
 )
 
 fun TextFont() = FontFamily(
