@@ -5,27 +5,42 @@ import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Menu
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavController
 import io.webthings.webthings.ui.theme.WebthingsFont
 import io.webthings.webthings.ui.theme.WebthingsTheme
+import kotlinx.coroutines.CoroutineScope
 
 /*
  *TODO: if we need different topapp bar, add an argument to select the right one and have all
  * if possible in the same file
  */
+//@Composable
+
+//fun TopBar(navController: NavController) {
+//    TopAppBar(
+//        navigationIcon = {
+//            IconButton(onClick = { /* TODO */ }){
+//                Icon(Icons.Filled.Menu, "")
+//            }
+//        },
+//        title = { Text("Dashboard Name") },
+//        actions = {
+//            /* TODO */
+//        }
+//    )
+//
+//}
 @Composable
-fun TopBar(navController: NavController) {
+fun TopBar(title: String){
     TopAppBar(
+        title = {Text(title)},
         navigationIcon = {
-            IconButton(onClick = { /* TODO */ }){
+            IconButton(onClick = { /* TODO */ } ){
                 Icon(Icons.Filled.Menu, "")
             }
-        },
-        title = { Text("Dashboard Name") },
-        actions = {
-            /* TODO */
+
         }
     )
-
 }
