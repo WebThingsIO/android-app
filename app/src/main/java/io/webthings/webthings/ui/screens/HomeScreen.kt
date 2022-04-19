@@ -12,12 +12,7 @@ import io.webthings.webthings.ui.theme.WebthingsTheme
 
 @Composable
 fun HomeScreen(navController: NavController){
-    Scaffold(
-        topBar = {/* TODO */},
-
-    ) {
-        Text("Webthings\r\nHomeScreen")
-    }
+    /* TODO */
 }
 @Preview(showBackground = true, device = DEVICES_PREVIEW)
 @Composable
