@@ -32,12 +32,3 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
-
-
-@Preview(showBackground = true, device = DEVICES_PREVIEW)
-@Composable
-fun DefaultPreview() {
-    WebthingsTheme {
-        AppScaffold()
-    }
-}
