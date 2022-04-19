@@ -27,35 +27,17 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             WebthingsTheme {
-                NavApp()
+               AppScaffold()
             }
         }
     }
 }
 
-@Composable
-fun NavApp(){
-    val navController = rememberNavController()
-    val context = LocalContext.current
-
-    NavHost(
-        navController = navController,
-        startDestination = NavRoutes.DashboardScreen.route
-    ){
-        composable(NavRoutes.HomeScreen.route){
-            HomeScreen(navController = navController)
-        }
-        composable(NavRoutes.DashboardScreen.route){
-            DashboardScreen(navController = navController)
-        }
-
-    }
-}
 
 @Preview(showBackground = true, device = DEVICES_PREVIEW)
 @Composable
 fun DefaultPreview() {
     WebthingsTheme {
-        NavApp()
+        AppScaffold()
     }
 }
