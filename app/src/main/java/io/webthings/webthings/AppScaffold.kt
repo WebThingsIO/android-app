@@ -7,8 +7,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.rememberNavController
+import io.webthings.webthings.ui.theme.WebthingsTheme
 import io.webthings.webthings.utils.MainViewModel
 import io.webthings.webthings.utils.NavigationHost
 import kotlinx.coroutines.launch
@@ -24,7 +26,7 @@ fun AppScaffold(){
     val topBar: @Composable () -> Unit= {
         TopAppBar(
             title = { Text(currentScreen!!.title) },
-            actions = {
+            navigationIcon = {
                 IconButton(onClick = {
                     scope.launch {
                         scaffoldState.drawerState.open()
@@ -43,7 +45,15 @@ fun AppScaffold(){
             /* TODO */
         },
         drawerGesturesEnabled = scaffoldState.drawerState.isOpen,
-    ){ innerPadding ->
+    ){ _ ->
         NavigationHost(navController, viewModel = viewModel)
+    }
+}
+
+@Preview(showBackground = true, device = DEVICES_PREVIEW)
+@Composable
+fun AppScaffoldPreview() {
+    WebthingsTheme {
+        AppScaffold()
     }
 }

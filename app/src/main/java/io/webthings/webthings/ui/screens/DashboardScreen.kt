@@ -10,8 +10,7 @@ import io.webthings.webthings.utils.MainViewModel
 @Composable
 fun DashboardScreen(viewModel: MainViewModel) {
     /*
-     * TODO: receive a dashboard item
-     *  so we could reuse Dashboard on mutliple Dashboard
+     * TODO
      */
 }
 

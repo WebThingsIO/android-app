@@ -10,17 +10,15 @@ import io.webthings.webthings.R
 
 // Set of Material typography styles to start with
 
-/*val WebthingsFont = FontFamily(
-    Font(R.font.zilla_slab_bold)
-
-)*/
-
-//TODO: fix issue with custom font
+fun WebthingsFont() = FontFamily(
+    Font(R.font.zilla_slab_bold, FontWeight.Bold),
+    Font(R.font.zilla_slab_medium)
+)
 
 val Typography = Typography(
-    //defaultFontFamily = WebthingsFont,
+    defaultFontFamily = WebthingsFont(),
     body1 = TextStyle(
-        fontFamily = FontFamily.Default,//WebthingsFont,
+        fontFamily = WebthingsFont(),
         fontWeight = FontWeight.Normal,
         fontSize = 16.sp
     )
