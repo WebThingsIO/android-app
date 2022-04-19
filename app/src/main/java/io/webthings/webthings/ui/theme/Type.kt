@@ -10,16 +10,22 @@ import androidx.compose.ui.unit.sp
 <<<<<<< 9d02f2866d63baf218b855948b37b10b1bc374ab
 =======
 
-val WebthingsFont = FontFamily(
+/*val WebthingsFont = FontFamily(
     Font(R.font.zilla_slab_bold)
 
-)
+)*/
+
+//TODO: fix issue with custom font
 
 >>>>>>> work on theme and Dashboard Screen
 val Typography = Typography(
-    defaultFontFamily = WebthingsFont,
+    //defaultFontFamily = WebthingsFont,
     body1 = TextStyle(
+<<<<<<< 36a06c279da614ed8b096666aca61df539a2d6bd
         fontFamily = FontFamily.Default,
+=======
+        fontFamily = FontFamily.Default,//WebthingsFont,
+>>>>>>> first drawer pitch + cleaning
         fontWeight = FontWeight.Normal,
         fontSize = 16.sp
     )

@@ -28,6 +28,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             WebthingsTheme {
+<<<<<<< 36a06c279da614ed8b096666aca61df539a2d6bd
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
@@ -35,11 +36,15 @@ class MainActivity : ComponentActivity() {
                 ) {
                     Greeting("Android")
                 }
+=======
+               AppScaffold()
+>>>>>>> first drawer pitch + cleaning
             }
         }
     }
 }
 
+<<<<<<< 36a06c279da614ed8b096666aca61df539a2d6bd
 @Composable
 <<<<<<< 9d02f2866d63baf218b855948b37b10b1bc374ab
 fun Greeting(name: String) {
@@ -63,11 +68,17 @@ fun NavApp(){
     }
 >>>>>>> work on theme and Dashboard Screen
 }
+=======
+>>>>>>> first drawer pitch + cleaning
 
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
     WebthingsTheme {
+<<<<<<< 36a06c279da614ed8b096666aca61df539a2d6bd
         Greeting("Android")
+=======
+        AppScaffold()
+>>>>>>> first drawer pitch + cleaning
     }
 }
