@@ -13,9 +13,9 @@ import io.webthings.webthings.ui.screens.GwSettingsScreen
 fun NavigationHost(navController: NavController, viewModel: MainViewModel){
     NavHost(
         navController = navController as NavHostController,
-        startDestination = NavRoutes.DashboardScreen.route
+        startDestination = NavRoutes.DrawerItems.DashboardScreen.route
     ){
-        composable(NavRoutes.DashboardScreen.route) { DashboardScreen(viewModel = viewModel)}
-        composable(NavRoutes.GwSettingsScreen.route) { GwSettingsScreen(viewModel = viewModel) }
+        composable(NavRoutes.DrawerItems.DashboardScreen.route) { DashboardScreen(viewModel = viewModel)}
+        composable(NavRoutes.DrawerItems.GwSettingsScreen.route) { GwSettingsScreen(viewModel = viewModel) }
     }
 }

@@ -8,7 +8,7 @@ import io.webthings.webthings.utils.MainViewModel
 
 @Composable
 fun GwSettingsScreen(viewModel: MainViewModel){
-    viewModel.setCurrentScreen(NavRoutes.GwSettingsScreen)
+    viewModel.setCurrentScreen(NavRoutes.DrawerItems.GwSettingsScreen)
     /*
      * TODO
      */

@@ -10,7 +10,7 @@ import io.webthings.webthings.utils.MainViewModel
 
 @Composable
 fun DashboardScreen(viewModel: MainViewModel) {
-    viewModel.setCurrentScreen(NavRoutes.DashboardScreen)
+    viewModel.setCurrentScreen(NavRoutes.DrawerItems.DashboardScreen)
     /*
      * TODO
      */
