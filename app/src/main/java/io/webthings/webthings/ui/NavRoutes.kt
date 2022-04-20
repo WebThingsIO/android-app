@@ -11,9 +11,11 @@ sealed class NavRoutes(val route:String, val title:String){
         "home")
     object DashboardScreen: NavRoutes("Dashboard",
         "Main Dashboard")
+    object GwSettingsScreen: NavRoutes("GwSettings", "Settings")
 }
 
 val drawerMenuItems = listOf(
     //TODO add other drawer menu entry
-    NavRoutes.DashboardScreen
+    NavRoutes.DashboardScreen,
+    NavRoutes.GwSettingsScreen
 )
