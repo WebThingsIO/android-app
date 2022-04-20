@@ -15,10 +15,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import io.webthings.webthings.ui.drawerMenuItems
-import io.webthings.webthings.ui.theme.DarkBlue
-import io.webthings.webthings.ui.theme.LightBlue
-import io.webthings.webthings.ui.theme.WebthingsFont
-import io.webthings.webthings.ui.theme.WebthingsTheme
+import io.webthings.webthings.ui.theme.*
 
 @Composable
 fun Drawer(
@@ -31,11 +28,7 @@ fun Drawer(
         ) {
                 Text(
                         "Webthings",
-                        style = TextStyle(
-                                fontFamily = WebthingsFont(),
-                                fontWeight = FontWeight.Bold,
-                                fontSize = 32.sp
-                        ),//MaterialTheme.typography.h4,
+                        style = HeaderStyle,
                         modifier = Modifier.padding(bottom = 10.dp)
                                 .align(alignment = Alignment.CenterHorizontally)
                         )
@@ -49,7 +42,7 @@ fun Drawer(
                                 Spacer(Modifier.height(24.dp))
                                 Text(
                                         text = screen.title,
-                                        style = MaterialTheme.typography.h5,
+                                        style = MenuItemStyle,
                                         modifier = Modifier
                                                 .clickable {
                                                         onDestinationClicked(screen.route)

@@ -11,7 +11,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.rememberNavController
 import io.webthings.webthings.ui.menus.Drawer
+import io.webthings.webthings.ui.theme.HeaderStyle
 import io.webthings.webthings.ui.theme.WebthingsTheme
+import io.webthings.webthings.utils.BackPressHandler
 import io.webthings.webthings.utils.MainViewModel
 import io.webthings.webthings.utils.NavigationHost
 import kotlinx.coroutines.launch
@@ -24,9 +26,17 @@ fun AppScaffold(){
     val scope = rememberCoroutineScope()
     val currentScreen by viewModel.currentScreen.observeAsState()
 
+    if (scaffoldState.drawerState.isOpen){
+        BackPressHandler {
+            scope.launch {
+                scaffoldState.drawerState.close()
+            }
+        }
+    }
+
     val topBar: @Composable () -> Unit= {
         TopAppBar(
-            title = { Text(currentScreen!!.title) },
+            title = { Text(currentScreen!!.title, style = HeaderStyle) },
             navigationIcon = {
                 //TODO if not home screen change to back arrow
                 IconButton(onClick = {
