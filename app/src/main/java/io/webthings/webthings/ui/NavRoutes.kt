@@ -1,21 +1,30 @@
 package io.webthings.webthings.ui
 
-import android.content.Context
-import android.content.res.Resources
-import androidx.compose.ui.res.stringResource
-import io.webthings.webthings.R
-import kotlin.math.absoluteValue
+
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Face
+import androidx.compose.material.icons.filled.Settings
+import androidx.compose.ui.graphics.vector.ImageVector
 
 sealed class NavRoutes(val route:String, val title:String){
     object HomeScreen : NavRoutes("home",
         "home")
-    object DashboardScreen: NavRoutes("Dashboard",
-        "Main Dashboard")
-    object GwSettingsScreen: NavRoutes("GwSettings", "Settings")
+
+    sealed class DrawerItems(
+        route: String,
+        title: String,
+        val icon: ImageVector): NavRoutes(route, title){
+        object DashboardScreen: DrawerItems("Dashboard",
+            "Main Dashboard", Icons.Default.Face)
+            object GwSettingsScreen: DrawerItems("GwSettings",
+                "Settings",
+                Icons.Default.Settings)
+        }
+
 }
 
 val drawerMenuItems = listOf(
     //TODO add other drawer menu entry
-    NavRoutes.DashboardScreen,
-    NavRoutes.GwSettingsScreen
+    NavRoutes.DrawerItems.DashboardScreen,
+    NavRoutes.DrawerItems.GwSettingsScreen
 )
