@@ -10,6 +10,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.rememberNavController
+import io.webthings.webthings.ui.menus.Drawer
 import io.webthings.webthings.ui.theme.WebthingsTheme
 import io.webthings.webthings.utils.MainViewModel
 import io.webthings.webthings.utils.NavigationHost
@@ -42,7 +43,17 @@ fun AppScaffold(){
         topBar = { topBar() },
         scaffoldState = scaffoldState,
         drawerContent = {
-            /* TODO */
+            Drawer{ screen ->
+                scope.launch {
+                    scaffoldState.drawerState.close()
+                }
+                navController.navigate(screen){
+
+                    //popUpTo = navController.graph.getStartDestination()
+                    //TODO this line cause app to crash, have to lookup for popUpToId
+                    launchSingleTop = true
+                }
+            }
         },
         drawerGesturesEnabled = scaffoldState.drawerState.isOpen,
     ){ _ ->
