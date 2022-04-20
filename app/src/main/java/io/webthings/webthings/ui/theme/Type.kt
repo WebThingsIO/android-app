@@ -35,3 +35,16 @@ val Typography = Typography(
     )
     */
 )
+
+val HeaderStyle = TextStyle(
+    fontFamily = WebthingsFont(),
+    fontWeight = FontWeight.Bold,
+    fontSize = 32.sp
+)
+
+val MenuItemStyle = TextStyle(
+    fontFamily = WebthingsFont(),
+    fontWeight = FontWeight.Bold,
+    fontSize = 24.sp
+
+)
