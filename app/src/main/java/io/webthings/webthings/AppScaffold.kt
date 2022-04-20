@@ -28,6 +28,7 @@ fun AppScaffold(){
         TopAppBar(
             title = { Text(currentScreen!!.title) },
             navigationIcon = {
+                //TODO if not home screen change to back arrow
                 IconButton(onClick = {
                     scope.launch {
                         scaffoldState.drawerState.open()
