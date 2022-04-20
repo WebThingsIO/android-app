@@ -7,6 +7,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.composable
 import io.webthings.webthings.ui.NavRoutes
 import io.webthings.webthings.ui.screens.DashboardScreen
+import io.webthings.webthings.ui.screens.GwSettingsScreen
 
 @Composable
 fun NavigationHost(navController: NavController, viewModel: MainViewModel){
@@ -15,5 +16,6 @@ fun NavigationHost(navController: NavController, viewModel: MainViewModel){
         startDestination = NavRoutes.DashboardScreen.route
     ){
         composable(NavRoutes.DashboardScreen.route) { DashboardScreen(viewModel = viewModel)}
+        composable(NavRoutes.GwSettingsScreen.route) { GwSettingsScreen(viewModel = viewModel) }
     }
 }
