@@ -1,9 +1,9 @@
-package io.webthings.webthings.utils
+package io.webthings.app.utils
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import io.webthings.webthings.ui.NavRoutes
+import io.webthings.app.ui.NavRoutes
 
 class MainViewModel: ViewModel() {
     private val _currentScreen = MutableLiveData<NavRoutes>(NavRoutes.DrawerItems.DashboardScreen)

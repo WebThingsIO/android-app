@@ -1,4 +1,4 @@
-package io.webthings.webthings.ui.theme
+package io.webthings.app.ui.theme
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.isSystemInDarkTheme
