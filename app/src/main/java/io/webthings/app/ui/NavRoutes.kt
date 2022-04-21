@@ -23,10 +23,10 @@ sealed class NavRoutes(val route:String, val title:String){
         object DashboardScreen: DrawerItems("Dashboard",
             "Main Dashboard",
             Icons.Default.Face)
-            object GwSettingsScreen: DrawerItems("GwSettings",
-                "Settings",
-                Icons.Default.Settings)
-        }
+        object GwSettingsScreen: DrawerItems("GwSettings",
+            "Settings",
+            Icons.Default.Settings)
+    }
 
 }
 
