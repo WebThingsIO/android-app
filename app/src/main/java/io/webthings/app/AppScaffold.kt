@@ -1,4 +1,4 @@
-package io.webthings.webthings
+package io.webthings.app
 
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
@@ -10,12 +10,12 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.rememberNavController
-import io.webthings.webthings.ui.menus.Drawer
-import io.webthings.webthings.ui.theme.HeaderStyle
-import io.webthings.webthings.ui.theme.WebthingsTheme
-import io.webthings.webthings.utils.BackPressHandler
-import io.webthings.webthings.utils.MainViewModel
-import io.webthings.webthings.utils.NavigationHost
+import io.webthings.app.ui.menus.Drawer
+import io.webthings.app.ui.theme.HeaderStyle
+import io.webthings.app.ui.theme.WebthingsTheme
+import io.webthings.app.utils.BackPressHandler
+import io.webthings.app.utils.MainViewModel
+import io.webthings.app.utils.NavigationHost
 import kotlinx.coroutines.launch
 
 @Composable

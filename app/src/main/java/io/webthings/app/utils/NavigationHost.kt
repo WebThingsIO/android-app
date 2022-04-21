@@ -1,13 +1,13 @@
-package io.webthings.webthings.utils
+package io.webthings.app.utils
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.composable
-import io.webthings.webthings.ui.NavRoutes
-import io.webthings.webthings.ui.screens.DashboardScreen
-import io.webthings.webthings.ui.screens.GwSettingsScreen
+import io.webthings.app.ui.NavRoutes
+import io.webthings.app.ui.screens.DashboardScreen
+import io.webthings.app.ui.screens.GwSettingsScreen
 
 @Composable
 fun NavigationHost(navController: NavController, viewModel: MainViewModel){

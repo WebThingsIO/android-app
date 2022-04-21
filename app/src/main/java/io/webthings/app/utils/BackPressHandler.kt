@@ -1,4 +1,4 @@
-package io.webthings.webthings.utils
+package io.webthings.app.utils
 
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.OnBackPressedDispatcher
