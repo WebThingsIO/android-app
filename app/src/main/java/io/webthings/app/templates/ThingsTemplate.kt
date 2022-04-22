@@ -1,6 +1,7 @@
 package io.webthings.app.templates
 
 import android.widget.Toast
+import io.webthings.app.R
 
 abstract class ThingsTemplate(
     val source: SourceTemplate,
@@ -26,7 +27,7 @@ abstract class ThingsTemplate(
         if (!this.isAvailable()){
             Toast.makeText(
                 source.context,
-                "TEST",
+                source.context.getString(R.string.unavailable),
                 Toast.LENGTH_LONG
             ).show()
             return
