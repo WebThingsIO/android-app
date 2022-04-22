@@ -21,10 +21,10 @@ sealed class NavRoutes(val route:String, val title:String){
         title: String,
         val icon: ImageVector): NavRoutes(route, title){
         object DashboardScreen: DrawerItems("Dashboard",
-            _context.getString(R.string.main_dashboard),
+            "Main Dashboard",
             Icons.Default.Face)
             object GwSettingsScreen: DrawerItems("GwSettings",
-                _context.getString(R.string.Settings),
+                "Settings",
                 Icons.Default.Settings)
         }
 
