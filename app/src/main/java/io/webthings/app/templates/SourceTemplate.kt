@@ -11,14 +11,14 @@ abstract class SourceTemplate(val context: Context) {
     abstract var sourceName: String
     /* Friendly name of the source */
 
-    abstract var sourceThings: MutableMap<String, ThingsTemplates>
+    abstract var sourceThings: MutableMap<String, ThingsTemplate>
     //TODO change second string to ThingsTemplate type
     //List that will contain all things owned by the source
 
-    abstract fun getThings():List<ThingsTemplates>
+    abstract fun getThings():List<ThingsTemplate>
     /* method to get the Things object from the source */
 
-    fun syncThings(things: List<ThingsTemplates>){
+    fun syncThings(things: List<ThingsTemplate>){
         /*
         *  method to check the source for all the available things
         * MUST update the sourceThings map
