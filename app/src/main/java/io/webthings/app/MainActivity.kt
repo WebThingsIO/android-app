@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.tooling.preview.Devices
+import io.webthings.app.templates.SourceTemplate
 import io.webthings.app.ui.theme.WebthingsTheme
 import io.webthings.app.utils.LocalBackPressedDispatcher
 
