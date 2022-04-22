@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="unavailable">
+        Thing: $this.name from Source: $this.source.sourceName is not available
+    </string>
+</resources>
