@@ -1,7 +1,6 @@
 package io.webthings.app.templates
 
 import android.widget.Toast
-import androidx.compose.runtime.Composable
 import io.webthings.app.R
 
 abstract class ThingsTemplate(
