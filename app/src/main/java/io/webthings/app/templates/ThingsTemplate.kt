@@ -1,6 +1,6 @@
 package io.webthings.app.templates
 
-abstract class ThingsTemplates(
+abstract class ThingsTemplate(
     val source: SourceTemplate,
     val id: String,
     var name: String) {
