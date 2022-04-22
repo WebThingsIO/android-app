@@ -6,7 +6,10 @@ import android.widget.Toast
 abstract class SourceTemplate(val context: Context) {
     /*
      * Abstract class that will define a source of things
-     * all source module will need to inherit from this class
+     * all source object will need to inherit from this class
+     *
+     * context - context of the application
+     *
      */
     abstract var sourceName: String
     /* Friendly name of the source */
@@ -17,6 +20,9 @@ abstract class SourceTemplate(val context: Context) {
 
     abstract fun getThings():List<ThingsTemplate>
     /* method to get the Things object from the source */
+
+    abstract fun isAvailable():Boolean
+    /* method to test if source is available */
 
     fun syncThings(things: List<ThingsTemplate>){
         /*
@@ -37,12 +43,4 @@ abstract class SourceTemplate(val context: Context) {
             }
         }
     }
-
-
-    //abstract fun removeSource(): Boolean//Not sure if necessary
-    /* method to delete the source properly from the system.*/
-
-    abstract fun isAvailable(): Boolean
-    /* method that inform us if the Source is available */
-
 }
