@@ -2,6 +2,7 @@ package io.webthings.app.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle
+<<<<<<< HEAD
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
@@ -23,6 +24,16 @@ val Typography = Typography(
     defaultFontFamily = TextFont(),
     body1 = TextStyle(
         fontFamily = TextFont(),
+=======
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.sp
+
+// Set of Material typography styles to start with
+val Typography = Typography(
+    body1 = TextStyle(
+        fontFamily = FontFamily.Default,
+>>>>>>> c51d2fdf9e971b3d786b7a3431c85a69390204f2
         fontWeight = FontWeight.Normal,
         fontSize = 16.sp
     )
@@ -38,6 +49,7 @@ val Typography = Typography(
         fontSize = 12.sp
     )
     */
+<<<<<<< HEAD
 )
 
 val HeaderStyle = TextStyle(
@@ -51,4 +63,6 @@ val MenuItemStyle = TextStyle(
     fontWeight = FontWeight.Bold,
     fontSize = 24.sp
 
+=======
+>>>>>>> c51d2fdf9e971b3d786b7a3431c85a69390204f2
 )

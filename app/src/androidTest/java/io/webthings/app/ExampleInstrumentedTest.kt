@@ -19,6 +19,10 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
+<<<<<<< HEAD
         assertEquals("io.webthings.webthings", appContext.packageName)
+=======
+        assertEquals("io.webthings.app", appContext.packageName)
+>>>>>>> c51d2fdf9e971b3d786b7a3431c85a69390204f2
     }
 }
