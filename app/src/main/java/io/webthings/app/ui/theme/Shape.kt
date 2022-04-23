@@ -1,4 +1,4 @@
-package io.webthings.webthings.ui.theme
+package io.webthings.app.ui.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Shapes
