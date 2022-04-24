@@ -16,6 +16,7 @@ import io.webthings.app.ui.theme.WebthingsTheme
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import io.webthings.app.AppScaffold
 import io.webthings.app.ui.NavRoutes
 import io.webthings.app.ui.screens.DashboardScreen
 import io.webthings.app.ui.screens.HomeScreen
