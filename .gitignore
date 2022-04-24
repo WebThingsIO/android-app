@@ -42,7 +42,6 @@ captures/
 # IntelliJ
 *.iml
 .idea/
-
 # Keystore files
 # Uncomment the following lines if you do not want to check your keystore files in.
 #*.jks
@@ -75,4 +74,4 @@ lint/intermediates/
 lint/generated/
 lint/outputs/
 lint/tmp/
-# lint/reports/
+# lint/reports/g
