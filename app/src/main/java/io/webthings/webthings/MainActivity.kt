@@ -12,13 +12,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
-import io.webthings.webthings.ui.theme.WebthingsTheme
+import io.webthings.app.ui.theme.WebthingsTheme
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import io.webthings.webthings.ui.NavRoutes
-import io.webthings.webthings.ui.screens.DashboardScreen
-import io.webthings.webthings.ui.screens.HomeScreen
+import io.webthings.app.ui.NavRoutes
+import io.webthings.app.ui.screens.DashboardScreen
+import io.webthings.app.ui.screens.HomeScreen
 
 const val DEVICES_PREVIEW = Devices.PIXEL_4_XL//Devices used for the preview
 
