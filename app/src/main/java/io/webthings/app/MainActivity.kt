@@ -19,8 +19,9 @@ class MainActivity : ComponentActivity() {
                     LocalBackPressedDispatcher provides this.onBackPressedDispatcher) {
 
                     AppScaffold()
-                }
+               }
             }
         }
     }
 }
+

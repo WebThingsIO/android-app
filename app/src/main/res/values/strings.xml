@@ -1,3 +1,8 @@
+<<<<<<< HEAD
 <resources>
     <string name="app_name">WebThings</string>
+=======
+<resources>
+    <string name="app_name">Webthings</string>
+>>>>>>> c51d2fdf9e971b3d786b7a3431c85a69390204f2
 </resources>
