@@ -8,6 +8,7 @@ import androidx.compose.ui.tooling.preview.Devices
 import io.webthings.app.templates.SourceTemplate
 import io.webthings.app.ui.theme.WebthingsTheme
 import io.webthings.app.utils.LocalBackPressedDispatcher
+import io.webthings.webthings.AppScaffold
 
 const val DEVICES_PREVIEW = Devices.PIXEL_4_XL//Devices used for the preview
 
