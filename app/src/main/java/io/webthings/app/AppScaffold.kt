@@ -13,6 +13,7 @@ import androidx.navigation.compose.rememberNavController
 import io.webthings.app.DEVICES_PREVIEW
 import io.webthings.app.ui.menus.Drawer
 import io.webthings.app.ui.theme.WebthingsTheme
+import io.webthings.app.utils.BackPressHandler
 import io.webthings.app.utils.MainViewModel
 import io.webthings.app.utils.NavigationHost
 import kotlinx.coroutines.launch
@@ -24,6 +25,14 @@ fun AppScaffold(){
     val scaffoldState = rememberScaffoldState()
     val scope = rememberCoroutineScope()
     val currentScreen by viewModel.currentScreen.observeAsState()
+
+    if (scaffoldState.drawerState.isOpen){
+        BackPressHandler {
+            scope.launch {
+                scaffoldState.drawerState.close()
+            }
+        }
+    }
 
     val topBar: @Composable () -> Unit= {
         TopAppBar(

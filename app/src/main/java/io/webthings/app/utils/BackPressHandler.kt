@@ -6,12 +6,12 @@ import androidx.compose.runtime.*
 
 @Composable
 fun BackPressHandler(onBackPressed: () -> Unit){
-    val currentOnBackPRessed by rememberUpdatedState(onBackPressed)
+    val currentOnBackPressed by rememberUpdatedState(onBackPressed)
 
     val backCallback = remember {
         object : OnBackPressedCallback(true){
             override fun handleOnBackPressed(){
-                currentOnBackPRessed()
+                currentOnBackPressed()
             }
         }
     }
