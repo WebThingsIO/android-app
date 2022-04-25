@@ -3,11 +3,11 @@ package io.webthings.app.templates
 import android.content.Context
 import android.widget.Toast
 
-abstract class SourceTemplate(val context: Context) {
-    /*
+    /**
      * Abstract class that will define a source of things
      * all source module will need to inherit from this class
      */
+abstract class SourceTemplate(val context: Context) {
     abstract var sourceName: String
     /* Friendly name of the source */
 
