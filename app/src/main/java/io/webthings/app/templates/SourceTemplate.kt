@@ -2,6 +2,7 @@ package io.webthings.app.templates
 
 import android.content.Context
 import android.widget.Toast
+import androidx.compose.runtime.Composable
 
 abstract class SourceTemplate(val context: Context) {
     /*
@@ -23,6 +24,12 @@ abstract class SourceTemplate(val context: Context) {
 
     abstract fun isAvailable():Boolean
     /* method to test if source is available */
+
+    abstract fun saveSettings()
+    /* method to save the settings */
+    @Composable
+    abstract fun SettingsScreen()
+    /* method to show a configuration page into the settings screen */
 
     fun syncThings(things: List<ThingsTemplate>){
         /*
