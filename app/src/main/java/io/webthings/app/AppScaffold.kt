@@ -11,7 +11,9 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.rememberNavController
 import androidx.compose.runtime.livedata.observeAsState
 import io.webthings.app.ui.NavigationHost
+import io.webthings.app.ui.menus.Drawer
 import io.webthings.app.ui.theme.HeaderStyle
+import kotlinx.coroutines.launch
 
 @Composable
 fun AppScaffold(){
@@ -25,18 +27,32 @@ fun AppScaffold(){
         TopAppBar(
             title= { Text(currentScreen!!.title, style = HeaderStyle) },
             navigationIcon = {
-                IconButton(onClick = { /*TODO*/ })
+                IconButton(onClick = {
+                    scope.launch {
+                        scaffoldState.drawerState.open()
+                    }
+                })
                 {
                     Icon(Icons.Filled.Menu, contentDescription = "Menu")
                 }
-
             }
         )
     }
 
     Scaffold(
         topBar = { topBar() },
-        scaffoldState = scaffoldState
+        scaffoldState = scaffoldState,
+        drawerContent = {
+            Drawer{ screen ->
+                scope.launch {
+                    scaffoldState.drawerState.close()
+                }
+                navController.navigate(screen){
+                    launchSingleTop = true
+                }
+            }
+        },
+        drawerGesturesEnabled = scaffoldState.drawerState.isOpen,
     ){ _ ->
         NavigationHost(navController, viewModel = viewModel)
     }
