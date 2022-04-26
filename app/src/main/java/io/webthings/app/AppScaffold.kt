@@ -10,10 +10,10 @@ import io.webthings.app.utils.MainViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.rememberNavController
 import androidx.compose.runtime.livedata.observeAsState
-import io.webthings.app.ui.NavigationHost
 import io.webthings.app.ui.menus.Drawer
 import io.webthings.app.ui.theme.HeaderStyle
 import io.webthings.app.utils.BackPressHandler
+import io.webthings.app.utils.NavigationHost
 import kotlinx.coroutines.launch
 
 @Composable
