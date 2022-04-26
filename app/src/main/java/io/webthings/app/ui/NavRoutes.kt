@@ -14,3 +14,7 @@ sealed class NavRoutes(val route: String, val title: String){
                 Icons.Default.Face)
         }
 }
+
+val drawerMenuItems = listOf(
+    NavRoutes.DrawerItems.ThingsScreen
+)
