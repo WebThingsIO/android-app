@@ -1,5 +1,6 @@
 package io.webthings.app.ui.theme
 
+import androidx.compose.material.Text
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
@@ -37,7 +38,7 @@ val Typography = Typography(
     */
 )
 val HeaderStyle = TextStyle(
-    fontFamily = WebthingsFont(),
+    fontFamily = TextFont(),
     fontWeight = FontWeight.Normal,
     fontSize = 32.sp
 )

@@ -18,3 +18,4 @@ sealed class NavRoutes(val route: String, val title: String){
 val drawerMenuItems = listOf(
     NavRoutes.DrawerItems.ThingsScreen
 )
+

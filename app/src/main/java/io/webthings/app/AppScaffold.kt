@@ -13,8 +13,10 @@ import androidx.compose.runtime.livedata.observeAsState
 import io.webthings.app.ui.menus.Drawer
 import io.webthings.app.ui.theme.HeaderStyle
 import io.webthings.app.utils.BackPressHandler
-import io.webthings.app.utils.NavigationHost
 import kotlinx.coroutines.launch
+import io.webthings.app.ui.NavigationHost
+
+
 
 @Composable
 fun AppScaffold(){
@@ -24,6 +26,7 @@ fun AppScaffold(){
     val scope = rememberCoroutineScope()
     val currentScreen by viewModel.currentScreen.observeAsState()
 
+
     if (scaffoldState.drawerState.isOpen){
         BackPressHandler {
             scope.launch{
@@ -31,7 +34,6 @@ fun AppScaffold(){
             }
         }
     }
-
     val topBar: @Composable () -> Unit= {
         TopAppBar(
             title= { Text(currentScreen!!.title, style = HeaderStyle) },
@@ -50,6 +52,7 @@ fun AppScaffold(){
 
     Scaffold(
         topBar = { topBar() },
+
         scaffoldState = scaffoldState,
         drawerContent = {
             Drawer{ screen ->
