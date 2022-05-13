@@ -52,6 +52,7 @@ fun Drawer(
                               .clickable(
                                   interactionSource = remember { MutableInteractionSource() },
                                   indication = rememberRipple(color = DarkBlue),
+                                  //TODO: highlight current screen in the menu
                               ) {
                                   onDestinationClicked(
                                       screen.route
