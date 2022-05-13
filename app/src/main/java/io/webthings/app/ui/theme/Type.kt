@@ -38,7 +38,7 @@ val Typography = Typography(
     */
 )
 val HeaderStyle = TextStyle(
-    fontFamily = WebthingsFont(),
+    fontFamily = TextFont(),
     fontWeight = FontWeight.Normal,
     fontSize = 32.sp
 )
