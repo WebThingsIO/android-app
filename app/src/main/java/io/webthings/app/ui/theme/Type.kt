@@ -48,3 +48,9 @@ val MenuItemStyle = TextStyle(
     fontWeight = FontWeight.Normal,
     fontSize = 24.sp
 )
+
+val WebThingsStyle = TextStyle(
+    fontFamily = WebthingsFont(),
+    fontWeight = FontWeight.Normal,
+    fontSize = 32.sp
+)

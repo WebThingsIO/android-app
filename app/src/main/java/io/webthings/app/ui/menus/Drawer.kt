@@ -13,10 +13,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import io.webthings.app.R
 import io.webthings.app.ui.drawerMenuItems
-import io.webthings.app.ui.theme.DarkBlue
-import io.webthings.app.ui.theme.HeaderStyle
-import io.webthings.app.ui.theme.LightBlue
-import io.webthings.app.ui.theme.MenuItemStyle
+import io.webthings.app.ui.theme.*
 
 @Composable
 fun Drawer(
@@ -26,7 +23,7 @@ fun Drawer(
         modifier.fillMaxSize()
             .padding(top = 10.dp)){
         Text(stringResource(R.string.app_name),
-        style = HeaderStyle,
+        style = WebThingsStyle,
         modifier = Modifier
             .padding(bottom = 10.dp)
             .align(alignment = Alignment.CenterHorizontally))
