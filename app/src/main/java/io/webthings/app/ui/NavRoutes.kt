@@ -1,16 +1,22 @@
 package io.webthings.app.ui
 
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Face
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.res.painterResource
+import io.webthings.app.R
 
 sealed class NavRoutes(val route: String, val title: String){
     sealed class DrawerItems(
         route: String,
         title: String,
-        val icon: ImageVector): NavRoutes(route, title){
+        val icon: Int
+    ): NavRoutes(route, title){
             object ThingsScreen: DrawerItems("Things",
             "Things",
-                Icons.Default.Face)
+                R.drawable.things_icon)
         }
 }
+
+val drawerMenuItems = listOf(
+    NavRoutes.DrawerItems.ThingsScreen
+)
+
