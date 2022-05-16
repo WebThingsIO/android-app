@@ -5,11 +5,10 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.tooling.preview.Devices
-import io.webthings.app.templates.SourceTemplate
 import io.webthings.app.ui.theme.WebthingsTheme
 import io.webthings.app.utils.LocalBackPressedDispatcher
 
-const val DEVICES_PREVIEW = Devices.PIXEL_4_XL//Devices used for the preview
+const val DEVICES_PREVIEW = Devices.PIXEL_4_XL
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,10 +17,10 @@ class MainActivity : ComponentActivity() {
             WebthingsTheme {
                 CompositionLocalProvider(
                     LocalBackPressedDispatcher provides this.onBackPressedDispatcher) {
-
                     AppScaffold()
                 }
             }
         }
     }
 }
+
