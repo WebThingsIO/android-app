@@ -10,7 +10,7 @@ import io.webthings.app.utils.MainViewModel
 
 @Composable
 fun ThingsScreen(viewModel: MainViewModel) {
-    viewModel.setCurrentScreen(NavRoutes.DrawerItems.DashboardScreen)
+    viewModel.setCurrentScreen(NavRoutes.DrawerItems.ThingsScreen)
     /*
      * TODO
      */

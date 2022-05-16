@@ -15,7 +15,6 @@ import io.webthings.app.ui.theme.HeaderStyle
 import io.webthings.app.ui.theme.WebthingsTheme
 import io.webthings.app.utils.BackPressHandler
 import io.webthings.app.utils.MainViewModel
-import io.webthings.app.utils.NavigationHost
 import kotlinx.coroutines.launch
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.compose.runtime.livedata.observeAsState
