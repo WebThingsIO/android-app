@@ -9,8 +9,8 @@ import io.webthings.app.ui.theme.WebthingsTheme
 import io.webthings.app.utils.MainViewModel
 
 @Composable
-fun DashboardScreen(viewModel: MainViewModel) {
-    viewModel.setCurrentScreen(NavRoutes.DrawerItems.DashboardScreen)
+fun ThingsScreen(viewModel: MainViewModel) {
+    viewModel.setCurrentScreen(NavRoutes.DrawerItems.ThingsScreen)
     /*
      * TODO
      */
@@ -19,8 +19,8 @@ fun DashboardScreen(viewModel: MainViewModel) {
 
 @Preview(showBackground = true, device = DEVICES_PREVIEW)
 @Composable
-fun DashboardScreenPreview(){
+fun ThingsScreenPreview(){
     WebthingsTheme {
-        DashboardScreen(MainViewModel())
+        ThingsScreen(MainViewModel())
     }
 }

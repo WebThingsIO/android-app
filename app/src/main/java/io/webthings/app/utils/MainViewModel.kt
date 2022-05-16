@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModel
 import io.webthings.app.ui.NavRoutes
 
 class MainViewModel: ViewModel() {
-    private val _currentScreen = MutableLiveData<NavRoutes>(NavRoutes.DrawerItems.DashboardScreen)
+    private val _currentScreen = MutableLiveData<NavRoutes>(NavRoutes.DrawerItems.ThingsScreen)
     val currentScreen: LiveData<NavRoutes> = _currentScreen
 
     fun setCurrentScreen(screen: NavRoutes){

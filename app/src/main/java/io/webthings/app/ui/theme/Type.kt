@@ -8,8 +8,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import io.webthings.app.R
 
-// Set of Material typography styles to start with
-
 fun WebthingsFont() = FontFamily(
     Font(R.font.zilla_slab_semibold, FontWeight.Bold),
     Font(R.font.zilla_slab_medium)
@@ -41,14 +39,19 @@ val Typography = Typography(
 )
 
 val HeaderStyle = TextStyle(
-    fontFamily = WebthingsFont(),
-    fontWeight = FontWeight.Bold,
+    fontFamily = TextFont(),
+    fontWeight = FontWeight.Normal,
     fontSize = 32.sp
 )
 
 val MenuItemStyle = TextStyle(
     fontFamily = TextFont(),
     fontWeight = FontWeight.Bold,
-    fontSize = 24.sp
+    fontSize = 24.sp,
+)
 
+val WebThingsStyle = TextStyle(
+    fontFamily = WebthingsFont(),
+    fontWeight = FontWeight.Normal,
+    fontSize = 32.sp
 )
