@@ -1,4 +1,4 @@
-package io.webthings.app.ui
+package io.webthings.app.utils
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavController
